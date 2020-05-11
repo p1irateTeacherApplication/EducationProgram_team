@@ -1,0 +1,61 @@
+﻿<Window x:Class="test.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:test"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="500" Width="800" x:Name="MyWindow"
+        AllowsTransparency="True" Background="Transparent" WindowStyle="None">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="203*"/>
+            <ColumnDefinition Width="598*"/>
+        </Grid.ColumnDefinitions>
+        <Border Width="auto" Height="auto" BorderBrush="#FF730F0F" BorderThickness="3"
+                CornerRadius="30,30,30,30" Grid.ColumnSpan="2">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientBrush.GradientStops>
+                        <GradientStopCollection>
+                            <GradientStop Color="#73220C" Offset="0.0"></GradientStop>
+                            <GradientStop Color="#73220C" Offset="0.5"></GradientStop>
+                        </GradientStopCollection>
+                    </GradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5*"></RowDefinition>
+                    <RowDefinition Height="32*"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid>
+                    <Button x:Name="buttonHelp" Background="#73220C" BorderBrush="#73220C" Margin="28,16,733,14" Click="buttonHelp_Click">
+                        <Image Source="img/00.png" RenderTransformOrigin="1,0.5"/>
+                    </Button>
+                    <Button x:Name="buttonExit" Width="30" Height="30" Background="#73220C" BorderBrush="#73220C" Margin="737,16,27,17" Click="buttonExit_Click">
+                        <Image Source="img/33.png" RenderTransformOrigin="1,0.5"/>
+                    </Button>
+                    <Button x:Name="buttonHide" Width="30" Height="30" Background="#73220C" BorderBrush="#73220C" Margin="702,16,62,17" Click="buttonHide_Click">
+                        <Image Source="img/22.png" RenderTransformOrigin="1,0.5"/>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="1" Background="#73220C" Margin="0,2,-0.2,23.8" Grid.RowSpan="2">
+                    <Border Width="auto" Height="auto" BorderBrush="#FF730F0F" BorderThickness="1"
+                CornerRadius="50,50,40,40" Background="#FFEFEF">
+                    </Border>
+                    <Label Content="О Б У Ч Е Н И Е" Margin="254,22,250,0" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="40" BorderBrush="#FFFBFBFB" Foreground="#FF730F0F"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="72,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF730F0F" FontFamily="Century Gothic" FontSize="18" Height="209" Width="431"><Run Text="  &#x9;"/><Run/><LineBreak/><Run Text="&#x9;"/><Run Text="Добро пожаловать в обучающую программу &quot;Площади и панды&quot;!"/><LineBreak/><Run Text="&#x9;Это программа поможет Вам правильно решать задачи на площади и в школе все учителя будут Вами восхищаться!!!!"/><LineBreak/><Run Text="&#x9;Скорее же нажми на кнопку &quot;перейти к обучению&quot; и совершенствуйся!"/><LineBreak/><Run Text="  "/></TextBlock>
+                    <Image HorizontalAlignment="Left" Height="209" Margin="543,104,0,0" VerticalAlignment="Top" Width="210" Source="img/панда.png"/>
+                    <Border Margin="230,334,230,31" CornerRadius="10" BorderThickness="2" BorderBrush="#FF730F0F" Background="#FFCD572D">
+                        <Button x:Name="buttonStart" Content="перейти к обучению" HorizontalAlignment="Left" Margin="6,6,0,0" VerticalAlignment="Top" Width="322" FontFamily="Century Gothic" FontSize="20" Background="#FFCD572D" BorderBrush="#FFCD572D" Foreground="#FFF0E9D8" Height="30" Click="buttonStart_Click"/>
+                    </Border>
+
+                </Grid>
+                <TextBlock Padding="5" Grid.Row="2" HorizontalAlignment="Center"></TextBlock>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
